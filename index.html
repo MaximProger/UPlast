@@ -38,7 +38,7 @@
 							<a class="nav-link" href="#">Заказы</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Контакты</a>
+							<a class="nav-link" href="./contacts.html">Контакты</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">Помощник продаж</a>
@@ -48,7 +48,7 @@
 						</li>
 					</ul>
 					<form class="form-inline mt-2 mt-md-0">
-						<button type="button" class="btn btn-outline-info">Выход</button>
+						<button type="button" class="btn nav__bar__btn__enter btn-outline-info">Выход</button>
 					</form>
 				</div>
 			</div>
@@ -63,14 +63,14 @@
 				<div class="order_top d-flex flex-wrap align-items-center justify-content-between">
 					<h1 class="order__title">реестр заказов</h1>
 					<div class="order__top__btn">
-						<button type="button" class="btn btn-lg btn-info order__btn">резерв товара</button>
-						<button type="button" class="btn btn-lg btn-info order__btn">заказ транспорта</button>
+						<!-- <button type="button" class="btn btn-lg btn-info order__btn">резерв товара</button> -->
+						<a href="./reserve.html" class="btn btn-primary btn-info order__btn" role="button" aria-pressed="true">резерв товара</a>
+						<a href="./order__transport.html" class="btn btn-primary btn-info order__btn" role="button" aria-pressed="true">заказ транспорта</a>
+						<!-- <button type="button" class="btn btn-lg btn-info order__btn">заказ транспорта</button> -->
 					</div>
 				</div>
 				<div class="order__bot d-flex flex-wrap align-items-center justify-content-between">
 					<div class="order__bot__dropdown d-flex flex-wrap">
-						<!-- <button type="button" class="btn order__bot__dropdown__btn" id="datetimepicker-3"><i class="far fa-calendar-alt"></i>
-							Выберите дату</button> -->
 						<div class="order__data__wrapper order__bot__dropdown__btn">
 							<i class="order__data__icon far fa-calendar-alt"></i>
 							<input class="order__data btn order__bot__dropdown__btn" type="text" value="Выберите дату"

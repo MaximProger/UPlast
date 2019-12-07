@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Startup HTML template based">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/41064ceb63.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- DateTimePicker CSS -->
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>UPlast</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar__burger navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Заказы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Помощник продаж</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Помощь</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <button type="button" class="btn nav__bar__btn__enter btn-outline-info">Выход</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section class="order">
+        <div class="container-fluid">
+            <div class="order__inner col-lg-12 col-xl-9">
+                <div class="order_top d-flex flex-wrap align-items-center justify-content-between">
+                    <h1 class="order__title">резерв товара id 2059</h1>
+
+                </div>
+                <div class="order__bot">
+                    <div class="order__bot__dropdown d-flex flex-wrap justify-content-between align-items-center">
+
+                        <div class="order__top__btn">
+                            <a href="./index.html" class="btn btn-outline-info order__btn order__btn--reserve btn-lg"
+                                role="button" aria-pressed="true">Назад</a>
+                            <a href="#" class="btn btn-primary btn-info order__btn btn-lg" role="button"
+                                aria-pressed="true">Печать</a>
+                        </div>
+
+                        <div class="pagination pagination--reserve">
+                            <div class="pagination__inner row align-items-center">
+                                <div class="pagination__text">
+                                    <div class="pagination__list" id="pagList">1-5
+                                        <div class="pagination__list__value" id="pgListValue">
+                                            <p class="pagination__list__text">1</p>
+                                            <p class="pagination__list__text">2</p>
+                                            <p class="pagination__list__text">3</p>
+                                            <p class="pagination__list__text">4</p>
+                                            <p class="pagination__list__text">5</p>
+                                        </div>
+                                    </div>
+                                    из 5
+                                </div>
+                                <div class="pagination__wrapper">
+                                    <a href="" class="pagination__link pagination__link--prev"><i
+                                            class="fas fa-chevron-left"></i></a>
+                                    <a href="" class="pagination__link pagination__link--next"><i
+                                            class="fas fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <main role="main">
+        <div class="board">
+            <div class="container-fluid">
+                <div class="board__inner row">
+
+                    <div class="board__table .col-lg-12 col-xl-9">
+                        <table class="table table-hover table-responsive-md">
+                            <!-- table-responsive -->
+                            <thead class="table__head">
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Дата</th>
+                                    <th scope="col">Номер</th>
+                                    <th scope="col">Документ</th>
+                                    <th scope="col">Статус</th>
+                                    <th scope="col">Кол-во, шт</th>
+                                    <th scope="col">Сумма, RUB</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+                                <tr class="table__line">
+                                    <th scope="row">2060</th>
+                                    <td>21.03.2019</td>
+                                    <td>НТД00000264</td>
+                                    <td>Резерв товара<br><small>Для Кирилка</small></td>
+                                    <td>В резерве</td>
+                                    <td>100</td>
+                                    <td>122 007.50</td>
+                                </tr>
+                                <tr class="table__line">
+                                    <th scope="row">2059</th>
+                                    <td>19.03.2019</td>
+                                    <td>НТД00000266</td>
+                                    <td>Резерв товара<br><small>Для Кирилка</small></td>
+                                    <td>В резерве</td>
+                                    <td>200</td>
+                                    <td>200 150.00</td>
+                                </tr>
+                                <tr class="table__line">
+                                    <th scope="row">2060</th>
+                                    <td>21.03.2019</td>
+                                    <td>НТД00000264</td>
+                                    <td>Резерв товара<br><small>Для Кирилка</small></td>
+                                    <td>В резерве</td>
+                                    <td>100</td>
+                                    <td>122 007.50</td>
+                                </tr>
+                                <tr class="table__line">
+                                    <th scope="row">2059</th>
+                                    <td>19.03.2019</td>
+                                    <td>НТД00000266</td>
+                                    <td>Резерв товара<br><small>Для Кирилка</small></td>
+                                    <td>В резерве</td>
+                                    <td>200</td>
+                                    <td>200 150.00</td>
+                                </tr>
+                                <tr class="table__line">
+                                    <th scope="row">2060</th>
+                                    <td>21.03.2019</td>
+                                    <td>НТД00000264</td>
+                                    <td>Резерв товара<br><small>Для Кирилка</small></td>
+                                    <td>В резерве</td>
+                                    <td>100</td>
+                                    <td>122 007.50</td>
+                                </tr>
+                                <tr class="table__line">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <th scope="row" class="table__line__total text-right">Итого:</th>
+                                    <td>710</td>
+                                    <td>494 568.45</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board__profile col-lg-12 col-xl-3">
+                        <div class="board__wrapper col-lg-6 col-xl-12">
+                            <nav>
+                                <div class="profile nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a class="profile__title profile__title--1 nav-item nav-link" id="nav-home-tab"
+                                        data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
+                                        aria-selected="true">Контакты</a>
+                                    <a class="profile__title profile__title--2 nav-item nav-link active"
+                                        id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                                        aria-controls="nav-profile" aria-selected="false">Данные о заказе</a>
+
+                                </div>
+                            </nav>
+                            <div class="profile__content tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade  profile__item" id="nav-home" role="tabpanel"
+                                    aria-labelledby="nav-home-tab">
+                                    <div class="profile__item__content">
+                                        <div class="profile__item__line">
+                                            <p><b>Организация:</b></p>
+                                            <p>ИП Кирилка</p>
+                                        </div>
+                                        <div class="profile__item__line">
+                                            <p><b>Контактное лицо:</b></p>
+                                            <p>Чернышов Сергей Павлович</p>
+                                        </div>
+                                        <div class="profile__item__line">
+                                            <p><b>Телефон:</b></p>
+                                            <p><u>+7 (904) 407-96-86</u></p>
+                                        </div>
+                                        <div class="profile__item__line">
+                                            <p><b>Адрес разгрузки:</b></p>
+                                            <p>Минск, ул.Строителей, 15</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
+                                    aria-labelledby="nav-profile-tab profile__item">
+                                    <div class="profile__item__content">
+                                        <div class="profile__item__line">
+                                            <p><b>Транспорт для доставки:</b></p>
+                                            <p><b>машина 20 тонн</b></p>
+                                        </div>
+                                        <div class="profile__item__line">
+                                            <p><b>Общий объем продукции</b></p>
+                                            <p><b>56.64 м<sup>3</sup></b></p>
+                                        </div>
+                                        <div class="profile__item__line">
+                                            <p><b>Общий вес продукции:</b></p>
+                                            <p><b>13596.11 кг</b></p>
+                                        </div>
+                                        <div class="profile__item__line">
+                                            <p><b>Общая длина рядов:</b></p>
+                                            <p><b>12.55 м</b></p>
+                                        </div>
+                                        <div class="profile__item__line">
+                                            <p><b>К заказу допустима продукция короче:</b></p>
+                                            <p><b>1.05 м</b></p>
+                                        </div>
+                                        <div class="profile__item__line pb-2">
+                                            <p><b>Процент заполнения машины:</b></p>
+                                            <p><b>68%</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="board__ads col-lg-6 col-xl-12">
+                            <img src="./img/ads.png" alt="Ads">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Bootstrab & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- DateTimePicker -->
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+
+    <!-- Some components from other libs -->
+    <script src="js/libs__components.js"></script>
+
+    <!-- JS -->
+    <script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>
