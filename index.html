@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Startup HTML template based">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+	<!-- Fontawesome -->
+	<script src="https://kit.fontawesome.com/41064ceb63.js"></script>
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- DateTimePicker CSS -->
+	<link rel="stylesheet" href="css/jquery.datetimepicker.css">
+	<!-- Style -->
+	<link rel="stylesheet" href="css/styles.min.css">
+	<title>UPlast</title>
+</head>
+
+<body>
+
+	<header class="header">
+
+		<nav class="navbar navbar-expand-md">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+					aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar__burger navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Заказы</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Контакты</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Помощник продаж</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Помощь</a>
+						</li>
+					</ul>
+					<form class="form-inline mt-2 mt-md-0">
+						<button type="button" class="btn btn-outline-info">Выход</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+
+	</header>
+
+
+	<section class="order">
+		<div class="container-fluid">
+			<div class="order__inner col-lg-12 col-xl-9">
+				<div class="order_top d-flex flex-wrap align-items-center justify-content-between">
+					<h1 class="order__title">реестр заказов</h1>
+					<div class="order__top__btn">
+						<button type="button" class="btn btn-lg btn-info order__btn">резерв товара</button>
+						<button type="button" class="btn btn-lg btn-info order__btn">заказ транспорта</button>
+					</div>
+				</div>
+				<div class="order__bot d-flex flex-wrap align-items-center justify-content-between">
+					<div class="order__bot__dropdown d-flex flex-wrap">
+						<!-- <button type="button" class="btn order__bot__dropdown__btn" id="datetimepicker-3"><i class="far fa-calendar-alt"></i>
+							Выберите дату</button> -->
+						<div class="order__data__wrapper order__bot__dropdown__btn">
+							<i class="order__data__icon far fa-calendar-alt"></i>
+							<input class="order__data btn order__bot__dropdown__btn" type="text" value="Выберите дату"
+								id="datetimepicker-3">
+						</div>
+
+
+						<div class="dropdown">
+							<a class="btn order__bot__dropdown__btn dropdown-toggle" href="#" role="button"
+								id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Все документы
+							</a>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a class="dropdown-item" href="#">Заказ транспорта</a>
+								<a class="dropdown-item" href="#">Резерв транспорта</a>
+							</div>
+						</div>
+
+
+						<div class="dropdown">
+							<a class="btn order__bot__dropdown__btn dropdown-toggle" href="#" role="button"
+								id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Все статусы
+							</a>
+
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a class="dropdown-item" href="#">Черновик</a>
+								<a class="dropdown-item" href="#">В обработке</a>
+								<a class="dropdown-item" href="#">В резерве</a>
+								<a class="dropdown-item" href="#">Требует согласования</a>
+								<a class="dropdown-item" href="#">Повышение дебиторской задолженности</a>
+								<a class="dropdown-item" href="#">К удалению</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="pagination">
+						<div class="pagination__inner row align-items-center">
+							<div class="pagination__text">
+								<div class="pagination__list" id="pagList">1-10
+									<div class="pagination__list__value" id="pgListValue">
+										<p class="pagination__list__text">10</p>
+										<p class="pagination__list__text">20</p>
+										<p class="pagination__list__text">50</p>
+										<p class="pagination__list__text">100</p>
+									</div>
+								</div>
+								из 100
+							</div>
+							<div class="pagination__wrapper">
+								<a href="" class="pagination__link pagination__link--prev"><i
+										class="fas fa-chevron-left"></i></a>
+								<a href="" class="pagination__link pagination__link--next"><i
+										class="fas fa-chevron-right"></i></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<main role="main">
+		<div class="board">
+			<div class="container-fluid">
+				<div class="board__inner row">
+
+					<div class="board__table .col-lg-12 col-xl-9">
+						<table class="table table-hover table-responsive-lg">
+							<!-- table-responsive -->
+							<thead class="table__head">
+								<tr>
+									<th scope="col">ID</th>
+									<th scope="col">Дата</th>
+									<th scope="col">Номер</th>
+									<th scope="col">Документ</th>
+									<th scope="col">УПД</th>
+									<th scope="col">Машина</th>
+									<th scope="col">Статус <i class="fas fa-sync-alt"></i></th>
+									<th scope="col">Сумма</th>
+									<th scope="col">Действия</th>
+								</tr>
+							</thead>
+							<tbody class="table__body">
+								<tr class="table__line">
+									<th scope="row">2060</th>
+									<td>21.03.2019</td>
+									<td>ID: 2056<br> ID: 2057</td>
+									<td>Заказ транспорта</td>
+									<td></td>
+									<td></td>
+									<td>В обработке</td>
+									<td>122 007.50 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2059</th>
+									<td>19.03.2019</td>
+									<td>НТД00000266</td>
+									<td>Резерв товара<br><small>Для Кирилка</small></td>
+									<td></td>
+									<td>20 тонн</td>
+									<td>Черновик</td>
+									<td>200 150.00 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2060</th>
+									<td>21.03.2019</td>
+									<td>ID: 2056<br> ID: 2057</td>
+									<td>Заказ транспорта</td>
+									<td></td>
+									<td></td>
+									<td>В обработке</td>
+									<td>122 007.50 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2059</th>
+									<td>19.03.2019</td>
+									<td>НТД00000266</td>
+									<td>Резерв товара<br><small>Для Кирилка</small></td>
+									<td></td>
+									<td>20 тонн</td>
+									<td>Черновик</td>
+									<td>200 150.00 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2060</th>
+									<td>21.03.2019</td>
+									<td>ID: 2056<br> ID: 2057</td>
+									<td>Заказ транспорта</td>
+									<td></td>
+									<td></td>
+									<td>В обработке</td>
+									<td>122 007.50 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2059</th>
+									<td>19.03.2019</td>
+									<td>НТД00000266</td>
+									<td>Резерв товара<br><small>Для Кирилка</small></td>
+									<td></td>
+									<td>20 тонн</td>
+									<td>Черновик</td>
+									<td>200 150.00 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2060</th>
+									<td>21.03.2019</td>
+									<td>ID: 2056<br> ID: 2057</td>
+									<td>Заказ транспорта</td>
+									<td></td>
+									<td></td>
+									<td>В обработке</td>
+									<td>122 007.50 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2059</th>
+									<td>19.03.2019</td>
+									<td>НТД00000266</td>
+									<td>Резерв товара<br><small>Для Кирилка</small></td>
+									<td></td>
+									<td>20 тонн</td>
+									<td>Черновик</td>
+									<td>200 150.00 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2060</th>
+									<td>21.03.2019</td>
+									<td>ID: 2056<br> ID: 2057</td>
+									<td>Заказ транспорта</td>
+									<td></td>
+									<td></td>
+									<td>В обработке</td>
+									<td>122 007.50 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+								<tr class="table__line">
+									<th scope="row">2059</th>
+									<td>19.03.2019</td>
+									<td>НТД00000266</td>
+									<td>Резерв товара<br><small>Для Кирилка</small></td>
+									<td></td>
+									<td>20 тонн</td>
+									<td>Черновик</td>
+									<td>200 150.00 RUB</td>
+									<td class="table__actions d-flex">
+										<a href="#" class="table__edit" title="Редактировать"><i
+												class="fas fa-pencil-alt"></i></a>
+										<a href="#" class="table__copy" title="Копировать"><i
+												class="fas fa-copy"></i></a>
+										<a href="#" class="table__del" title="Удалить"><i
+												class="fas fa-trash-alt"></i></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="board__profile col-lg-12 col-xl-3">
+						<div class="board__wrapper col-lg-6 col-xl-12">
+							<nav>
+								<div class="profile nav nav-tabs" id="nav-tab" role="tablist">
+									<a class="profile__title profile__title--1 nav-item nav-link" id="nav-home-tab"
+										data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home"
+										aria-selected="true">Ваш профиль</a>
+									<a class="profile__title profile__title--2 nav-item nav-link active"
+										id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+										aria-controls="nav-profile" aria-selected="false">Ваш менеджер</a>
+
+								</div>
+							</nav>
+							<div class="profile__content tab-content" id="nav-tabContent">
+								<div class="tab-pane fade  profile__item" id="nav-home" role="tabpanel"
+									aria-labelledby="nav-home-tab">
+									<div class="profile__item__content">
+										<div class="profile__item__line">
+											<p><b>Логин</b></p>
+											<p>erohov@tut.by</p>
+										</div>
+										<div class="profile__item__line">
+											<p><b>Имя:</b></p>
+											<p>ЧПУП «Кирилка»</p>
+										</div>
+										<div class="profile__item__line">
+											<p><b>Почта:</b></p>
+											<p><u>erohov@tut.by</u></p>
+										</div>
+										<div class="profile__item__line">
+											<p><b>Валюта:</b></p>
+											<p>RUB</p>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
+									aria-labelledby="nav-profile-tab profile__item">
+									<div class="profile__item__content">
+										<div class="profile__item__line">
+											<p><b>Имя:</b></p>
+											<p>Долбик Андрей</p>
+										</div>
+										<div class="profile__item__line">
+											<p><b>Телефон:</b></p>
+											<p>+375 (29) 716 - 48 - 78<br>
+												+345 (25) 734 - 48 - 11</p>
+										</div>
+										<div class="profile__item__line">
+											<p><b>Почта:</b></p>
+											<p><u>erohov@tut.by</u></p>
+										</div>
+										<div class="text-center profile__item__btn">
+											<button type="button" class="btn btn-outline-info profile__btn">Написать
+												руководству</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="board__ads col-lg-6 col-xl-12">
+							<img src="./img/ads.png" alt="Ads">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+
+	<!-- Bootstrab & jQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+
+	<!-- DateTimePicker -->
+	<script src="js/jquery.datetimepicker.full.min.js"></script>
+
+	<!-- Some components from other libs -->
+	<script src="js/libs__components.js"></script>
+
+	<!-- JS -->
+	<script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>
