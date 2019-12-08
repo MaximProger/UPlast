@@ -3,7 +3,6 @@
 jQuery('.table__edit').tooltip();
 jQuery('.table__copy').tooltip();
 jQuery('.table__del').tooltip();
-jQuery('.table__show').tooltip();
 jQuery('.table__tab').tooltip();
 
 // Calendar
