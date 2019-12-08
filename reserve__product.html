@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Startup HTML template based">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/41064ceb63.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- DateTimePicker CSS -->
+    <link rel="stylesheet" href="css/jquery.datetimepicker.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>UPlast</title>
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar__burger navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Заказы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Помощник продаж</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Помощь</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <button type="button" class="btn nav__bar__btn__enter btn-outline-info">Выход</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <section class="order">
+        <div class="container-fluid">
+            <div class="order__inner col-lg-12 col-xl-9">
+                <div class="order_top d-flex flex-wrap align-items-center justify-content-between">
+                    <h1 class="order__title">резерв товара</h1>
+                    <div class="order__top__btn">
+                        <a href="./reserve.html" class="btn btn-outline-info order__btn btn-lg" role="button"
+                            aria-pressed="true">Далее</a>
+                    </div>
+                </div>
+                <!-- <div class="order__bot">
+					<div class="product__alert alert alert-primary alert-dismissible fade show" role="alert">
+                        Выберите необходимый товар, укажите количество и отправьте в корзину
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+				</div> -->
+            </div>
+        </div>
+    </section>
+
+    <main role="main">
+        <div class="board">
+            <div class="container-fluid">
+                <div class="board__inner row">
+
+                    <div class="board__table .col-lg-12 col-xl-9">
+                        <div class="product__alert alert alert-primary alert-dismissible fade show" role="alert">
+                            Выберите необходимый товар, укажите количество и отправьте в корзину
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <table class="table table-responsive-md">
+                            <!-- table-responsive -->
+                            <thead class="table__head">
+                                <tr>
+                                    <th scope="col">Наименование/Цвет</th>
+                                    <th scope="col">Наличие</th>
+                                    <th scope="col">Количетсво, шт</th>
+                                    <th scope="col">Цена, RUB</th>
+                                    <th scope="col">Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+
+                                <!-- Fisrt Item -->
+                                <tr class="table__line--main">
+                                    <th scope="row">Сайдинг «Корабельный брус»<br><span
+                                            class="table__poduct__under">3,05 х 0,230 = 0,702м2, уп.10шт. =
+                                            7,02м2</span></th>
+                                    <td></td>
+                                    <td class="d-flex align-items-center"></td>
+                                    <td></td>
+                                    <td class="table__actions">
+                                        <a href="#" id="tableFirstItemShow"
+                                            class="table__tab table__arrow table__arrow--show" title="Открыть"><i
+                                                class="fas fa-arrow-down"></i></a>
+                                        <a href="#" id="tableFirstItemHide"
+                                            class="table__tab table__arrow table__arrow--hide" title="Закрыть"><i
+                                                class="fas fa-arrow-up"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__line table__line--firstItem">
+                                    <th scope="row">Бежевый</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1" value="100"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть" data-toggle="modal"
+                                            data-target="#productPreview-1"><i class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__line table__line--firstItem">
+                                    <th scope="row">Белый</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--firstItem">
+                                    <th scope="row">Ванильный</th>
+                                    <td>Достаточно</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1" value="20"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--firstItem">
+                                    <th scope="row">Голубой</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--firstItem">
+                                    <th scope="row">Кремовый</th>
+                                    <td>Достаточно</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--firstItem">
+                                    <th scope="row">Кофе с молоком</th>
+                                    <td>Мало</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+
+                                <!-- Second Item -->
+                                <tr class="table__line table__line--main">
+                                    <th scope="row">Сайдинг «Блок-хаус»<br><span class="table__poduct__under">3,40 х
+                                            0,230 = 0,782м2, уп.10шт. = 7,82м2</span></th>
+                                    <td></td>
+                                    <td class="d-flex align-items-center"></td>
+                                    <td></td>
+                                    <td class="table__actions">
+                                        <a href="#" id="tableSecondItemShow"
+                                            class="table__tab table__arrow table__arrow--show" title="Открыть"><i
+                                                class="fas fa-arrow-down"></i></a>
+                                        <a href="#" id="tableSecondItemHide"
+                                            class="table__tab table__arrow table__arrow--hide" title="Закрыть"><i
+                                                class="fas fa-arrow-up"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__line table__line--secondItem">
+                                    <th scope="row">Бежевый</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1" value="100"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__line table__line--secondItem">
+                                    <th scope="row">Белый</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--secondItem">
+                                    <th scope="row">Ванильный</th>
+                                    <td>Достаточно</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1" value="20"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--secondItem">
+                                    <th scope="row">Голубой</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--secondItem">
+                                    <th scope="row">Кремовый</th>
+                                    <td>Достаточно</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--secondItem">
+                                    <th scope="row">Кофе с молоком</th>
+                                    <td>Мало</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+
+                                <!-- Third Item -->
+                                <tr class="table__line table__line--main">
+                                    <th scope="row">Сайдинг «Тимбер-блок» серии Дуб<br><span
+                                            class="table__poduct__under">3,40 х 0,230 = 0,782м2, уп.10шт. =
+                                            7,82м2</span></th>
+                                    <td></td>
+                                    <td class="d-flex align-items-center"></td>
+                                    <td></td>
+                                    <td class="table__actions">
+                                        <a href="#" id="tableThirdItemShow"
+                                            class="table__tab table__arrow table__arrow--show" title="Открыть"><i
+                                                class="fas fa-arrow-down"></i></a>
+                                        <a href="#" id="tableThirdItemHide"
+                                            class="table__tab table__arrow table__arrow--hide" title="Закрыть"><i
+                                                class="fas fa-arrow-up"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__line table__line--thirdItem">
+                                    <th scope="row">Бежевый</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1" value="100"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--thirdItem">
+                                    <th scope="row">Голубой</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--thirdItem">
+                                    <th scope="row">Кремовый</th>
+                                    <td>Достаточно</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--thirdItem">
+                                    <th scope="row">Кофе с молоком</th>
+                                    <td>Мало</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+
+                                <!-- Fourth Item -->
+                                <tr class="table__line table__line--main">
+                                    <th scope="row">Сайдинг «Тимбер-блок» серии Ясень<br><span
+                                            class="table__poduct__under">3,40 х 0,230 = 0,782м2, уп.10шт. =
+                                            7,82м2</span></th>
+                                    <td></td>
+                                    <td class="d-flex align-items-center"></td>
+                                    <td></td>
+                                    <td class="table__actions">
+                                        <a href="#" id="tableFourthItemShow"
+                                            class="table__tab table__arrow table__arrow--show" title="Открыть"><i
+                                                class="fas fa-arrow-down"></i></a>
+                                        <a href="#" id="tableFourthItemHide"
+                                            class="table__tab table__arrow table__arrow--hide" title="Закрыть"><i
+                                                class="fas fa-arrow-up"></i></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="table__line table__line--fourthItem">
+                                    <th scope="row">Бежевый</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1" value="100"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--fourthItem">
+                                    <th scope="row">Голубой</th>
+                                    <td>Много</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--fourthItem">
+                                    <th scope="row">Кремовый</th>
+                                    <td>Достаточно</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="table__line table__line--fourthItem">
+                                    <th scope="row">Кофе с молоком</th>
+                                    <td>Мало</td>
+                                    <td class="d-flex align-items-center"><input type="text"
+                                            class="table__input form-control" id="exampleInputEmail1"> <i
+                                            class="table__cart fas fa-shopping-cart"></i></td>
+                                    <td>120.04</td>
+                                    <td class="table__actions">
+                                        <a href="#" class="table__show" title="Посмотреть"><i
+                                                class="fas fa-camera"></i></a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="board__profile col-lg-12 col-xl-3">
+                        <div class="board__wrapper col-lg-6 col-xl-12">
+                            <nav>
+                                <div class="profile profile--product nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a class="profile__title profile__title--2 nav-item nav-link active"
+                                        id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                                        aria-controls="nav-profile" aria-selected="false">Резерв товара ID 2061</a>
+
+                                </div>
+                            </nav>
+                            <div class="profile__content profile__content--product tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
+                                    aria-labelledby="nav-profile-tab profile__item">
+                                    <div class="profile__item__content profile__item__content--product">
+                                        <div class="profile__item__line profile__item__line--product">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1"><b>Транспорт</b></label>
+                                                <select class="form-control product__select"
+                                                    id="exampleFormControlSelect1">
+                                                    <option>Машина 20 тонн</option>
+                                                    <option>Машина 30 тонн</option>
+                                                    <option>Машина 40 тонн</option>
+                                                </select>
+                                            </div>
+                                            <div class="profile__item__line profile__item__line--product mb-2">
+                                                <p><u>К заказу допустима продукция короче:</u></p>
+                                                <p><u>10.55 м</u></p>
+                                            </div>
+                                            <div class="profile__item__line profile__item__line--product mb-2">
+                                                <p><u>Процент заполнения машины:</u></p>
+                                                <p><u>30%</u></p>
+                                            </div>
+                                            <div class="profile__item__line profile__item__line--product mb-2">
+                                                <p><u>Общий объем продукции:</u></p>
+                                                <p><u>0.07m3</u></p>
+                                            </div>
+                                            <div class="profile__item__line profile__item__line--product mb-2">
+                                                <p><u>Общий вес продукции:</u></p>
+                                                <p><u>16.11кг
+                                                    </u></p>
+                                            </div>
+                                            <div class="profile__item__line profile__item__line--product mb-2">
+                                                <p><u>Общая длина рядов:</u></p>
+                                                <p><u>3.4м</u></p>
+                                            </div>
+                                            <hr>
+                                            <div
+                                                class="profile__item__line d-flex align-items-center justify-content-between profile__item__line--product">
+                                                <p><b>Всего наименований:</b></p>
+                                                <p class="profile__item__line__value">2</p>
+                                            </div>
+                                            <div
+                                                class="profile__item__line d-flex align-items-center justify-content-between  profile__item__line--product">
+                                                <p><b>Всего количество:</b></p>
+                                                <p class="profile__item__line__value">120</p>
+                                            </div>
+                                            <div
+                                                class="profile__item__line d-flex align-items-center justify-content-between profile__item__line--product">
+                                                <p><b>Всего сумма RUB:</b></p>
+                                                <p class="profile__item__line__value">2 480.20</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="board__ads col-lg-6 col-xl-12">
+                                <img class="img-fluid" src="./img/ads.png" alt="Ads">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!--Product Preview-->
+    <div class="modal fade addcontact" id="productPreview-1" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Сайдинг «Корабельный брус»</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+
+                    <!-- <p>Сайдинг (ПВХ).0230.Н. «Корабельный брус», 4735С, бежевый</p>
+                    <div class="product__photo text-center">
+                        <img src="./img/product__photo-1.png" alt="Product Photo">
+                    </div> -->
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <p>Сайдинг (ПВХ).0230.Н. «Корабельный брус», 4735С, бежевый</p>
+                            <img class="product__photo img-fluid" src="./img/product__photo-1.png" alt="Product Photo 1">
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <p>Сайдинг (ПВХ).0430.Н. «Корабельный брус», 4345С, ванильный</p>
+                            <img class="product__photo img-fluid" src="./img/product__photo-2.png" alt="Product Photo 2">
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
+                            <p>Сайдинг (ПВХ).0230.Н. «Корабельный брус», 4735С, белый</p>
+                            <img class="product__photo img-fluid" src="./img/product__photo-3.png" alt="Product Photo 3">
+                            </div>
+                    </div>
+                    <ul class="product__pannel nav nav-pills mb-3 text-center d-flex align-items-center justify-content-center"
+                        id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="product__pannel__link nav-link active" id="pills-home-tab" data-toggle="pill"
+                                href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img
+                                    src="./img/product__photo-1.png" width="60" height="50" alt="Product Logo Small"
+                                    class="img-thumbnail product__photo__small"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="product__pannel__link nav-link" id="pills-profile-tab" data-toggle="pill"
+                                href="#pills-profile" role="tab" aria-controls="pills-profile"
+                                aria-selected="false"><img src="./img/product__photo-2.png" width="60" height="50"
+                                    alt="Product Logo Small" class="img-thumbnail product__photo__small"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="product__pannel__link nav-link" id="pills-contact-tab" data-toggle="pill"
+                                href="#pills-contact" role="tab" aria-controls="pills-contact"
+                                aria-selected="false"><img src="./img/product__photo-3.png" width="60" height="50"
+                                    alt="Product Logo Small" class="img-thumbnail product__photo__small"></a>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrab & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- DateTimePicker -->
+    <script src="js/jquery.datetimepicker.full.min.js"></script>
+
+    <!-- Some components from other libs -->
+    <script src="js/libs__components.js"></script>
+
+    <!-- JS -->
+    <script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>
