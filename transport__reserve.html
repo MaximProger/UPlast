@@ -23,39 +23,39 @@
 
 <body>
 
-        <header class="header">
+    <header class="header">
 
-                <nav class="navbar navbar-expand-md">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar__burger navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarCollapse">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="./index.html">Заказы</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./contacts.html">Контакты</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Помощник продаж</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Помощь</a>
-                                </li>
-                            </ul>
-                            <form class="form-inline mt-2 mt-md-0">
-                                <button type="button" class="btn nav__bar__btn__enter btn-outline-info" data-toggle="modal"
-                                data-target="#logOut">Выход</button>
-                            </form>
-                        </div>
-                    </div>
-                </nav>
-        
-            </header>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar__burger navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">Заказы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacts.html">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Помощник продаж</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Помощь</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <button type="button" class="btn nav__bar__btn__enter btn-outline-info" data-toggle="modal"
+                            data-target="#logOut">Выход</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+    </header>
 
 
     <section class="order">
@@ -68,7 +68,7 @@
         </div>
     </section>
 
-    <main role="main">
+    <main>
         <div class="board">
             <div class="container-fluid">
 
@@ -115,8 +115,8 @@
                             </nav>
                             <div class="profile__content profile__content--product profile__content--transport__reserve tab-content"
                                 id="nav-tabContent">
-                                <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
-                                    aria-labelledby="nav-profile-tab profile__item">
+                                <div class="tab-pane fade show active profile__item" id="nav-profile" role="tabpanel"
+                                    aria-labelledby="nav-profile-tab">
                                     <div class="profile__item__content profile__item__content--product">
                                         <div class="profile__item__line profile__item__line--product">
                                             <div
@@ -158,11 +158,11 @@
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
     <!-- Add Transport -->
-    <div class="modal fade addcontact" id="addTransport" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade addcontact" id="addTransport" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -176,7 +176,7 @@
                     <table class="table table-hover table-responsive-sm">
                         <!-- table-responsive -->
                         <thead class="table__head">
-                            <tr> 
+                            <tr>
                                 <th scope="col">
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -255,8 +255,9 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <a href="./transport__reserve.html" class="btn btn-outline-info order__btn order__btn--reserve btn-lg"
-                        role="button" aria-pressed="true">Отмена</a>
+                    <a href="./transport__reserve.html"
+                        class="btn btn-outline-info order__btn order__btn--reserve btn-lg" role="button"
+                        aria-pressed="true">Отмена</a>
                     <button type="submit" class="btn btn-primary btn-info order__btn btn-lg">Добавить</button>
                 </div>
             </div>

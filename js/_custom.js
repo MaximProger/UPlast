@@ -1,5 +1,5 @@
 $(function() {
-    
+
     // Pagination List
     $('#pagList').on('click', function() {
         $('#pgListValue').toggleClass('active');
@@ -32,8 +32,6 @@ $(function() {
         $('.table__line--fourthItem').toggleClass('show');
         $('#tableFourthItemShow .fa-arrow-down').toggleClass('fa-arrow-up');
     })
-
-    
 
     // Delite Function
     $('.deliteBtn').click(function(){
