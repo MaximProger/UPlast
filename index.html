@@ -35,7 +35,7 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="#">Заказы</a>
+							<a class="nav-link" href="./index.html">Заказы</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="./contacts.html">Контакты</a>
@@ -48,7 +48,8 @@
 						</li>
 					</ul>
 					<form class="form-inline mt-2 mt-md-0">
-						<button type="button" class="btn nav__bar__btn__enter btn-outline-info">Выход</button>
+						<button type="button" class="btn nav__bar__btn__enter btn-outline-info" data-toggle="modal"
+							data-target="#logOut">Выход</button>
 					</form>
 				</div>
 			</div>
@@ -63,10 +64,11 @@
 				<div class="order_top d-flex flex-wrap align-items-center justify-content-between">
 					<h1 class="order__title">реестр заказов</h1>
 					<div class="order__top__btn">
-						<!-- <button type="button" class="btn btn-lg btn-info order__btn">резерв товара</button> -->
-						<a href="./reserve__product.html" class="btn btn-primary btn-info order__btn" role="button" aria-pressed="true">резерв товара</a>
-						<a href="./order__transport.html" class="btn btn-primary btn-info order__btn" role="button" aria-pressed="true">заказ транспорта</a>
-						<!-- <button type="button" class="btn btn-lg btn-info order__btn">заказ транспорта</button> -->
+						<a href="./reserve__product.html" class="btn btn-primary btn-info order__btn" role="button"
+							aria-pressed="true">резерв товара</a>
+						<a href="./transport__reserve.html" class="btn btn-primary btn-info order__btn" role="button"
+							aria-pressed="true">заказ транспорта</a>
+
 					</div>
 				</div>
 				<div class="order__bot d-flex flex-wrap align-items-center justify-content-between">
@@ -80,11 +82,12 @@
 
 						<div class="dropdown">
 							<a class="btn order__bot__dropdown__btn dropdown-toggle" href="#" role="button"
-								id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								id="dropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">
 								Все документы
 							</a>
 
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink1">
 								<a class="dropdown-item" href="#">Заказ транспорта</a>
 								<a class="dropdown-item" href="#">Резерв транспорта</a>
 							</div>
@@ -93,11 +96,12 @@
 
 						<div class="dropdown">
 							<a class="btn order__bot__dropdown__btn dropdown-toggle" href="#" role="button"
-								id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">
 								Все статусы
 							</a>
 
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
 								<a class="dropdown-item" href="#">Черновик</a>
 								<a class="dropdown-item" href="#">В обработке</a>
 								<a class="dropdown-item" href="#">В резерве</a>
@@ -135,7 +139,7 @@
 		</div>
 	</section>
 
-	<main role="main">
+	<main>
 		<div class="board">
 			<div class="container-fluid">
 				<div class="board__inner row">
@@ -375,8 +379,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
-									aria-labelledby="nav-profile-tab profile__item">
+								<div class="tab-pane profile__item fade show active" id="nav-profile" role="tabpanel"
+									aria-labelledby="nav-profile-tab">
 									<div class="profile__item__content">
 										<div class="profile__item__line">
 											<p><b>Имя:</b></p>
@@ -407,6 +411,29 @@
 			</div>
 		</div>
 	</main>
+
+	<!-- Logout -->
+	<div class="modal fade addcontact" id="logOut" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Добавить заказ в транспорт</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Вы собираетесь выйти из своей учетной записи.</p>
+					<p>Хотите продолжить?</p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" data-dismiss="modal" class="btn btn-outline-info order__btn order__btn--reserve btn-lg"
+						role="button" aria-pressed="true">Отмена</a>
+					<button type="submit" class="btn btn-primary btn-info order__btn btn-lg">Выйти</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 	<!-- Bootstrab & jQuery -->

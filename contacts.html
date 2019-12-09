@@ -35,10 +35,10 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Заказы</a>
+                            <a class="nav-link" href="./index.html">Заказы</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Контакты</a>
+                            <a class="nav-link" href="./contacts.html">Контакты</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Помощник продаж</a>
@@ -48,7 +48,8 @@
                         </li>
                     </ul>
                     <form class="form-inline mt-2 mt-md-0">
-                        <button type="button" class="btn nav__bar__btn__enter btn-outline-info">Выход</button>
+                        <button type="button" class="btn nav__bar__btn__enter btn-outline-info" data-toggle="modal"
+                            data-target="#logOut">Выход</button>
                     </form>
                 </div>
             </div>
@@ -72,7 +73,7 @@
         </div>
     </section>
 
-    <main role="main">
+    <main>
         <div class="board">
             <div class="container-fluid">
                 <div class="board__inner row">
@@ -182,8 +183,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade show active" id="nav-profile" role="tabpanel"
-                                    aria-labelledby="nav-profile-tab profile__item">
+                                <div class="tab-pane fade show active profile__item" id="nav-profile" role="tabpanel"
+                                    aria-labelledby="nav-profile-tab">
                                     <div class="profile__item__content">
                                         <div class="profile__item__line">
                                             <p><b>Имя:</b></p>
@@ -221,7 +222,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Добавить контакт</h5>
+                    <h5 class="modal-title">Добавить контакт</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -234,13 +235,13 @@
                             <input type="text" class="form-control" id="formGroupExampleInput">
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Телефон</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput"
+                            <label for="formGroupExampleInput1">Телефон</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput1"
                                 placeholder="+X (XXX) XXX-XX-XX">
                         </div>
                         <div class="form-group">
                             <label for="formGroupExampleInput">Телефон 2</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput"
+                            <input type="text" class="form-control" id="formGroupExampleInput2"
                                 placeholder="+X (XXX) XXX-XX-XX">
                         </div>
                         <div class="form-group">
@@ -266,7 +267,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Редактировать контакт</h5>
+                    <h5 class="modal-title">Редактировать контакт</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -274,26 +275,26 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Контактное лицо<sup><i
+                            <label for="formGroupExampleInput4">Контактное лицо<sup><i
                                         class="addontact__star fas fa-star-of-life"></i></sup></label>
-                            <input type="text" class="form-control is-valid" id="formGroupExampleInput"
+                            <input type="text" class="form-control is-valid" id="formGroupExampleInput4"
                                 value="Чернышов Сергей Павлович">
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Телефон1<sup><i
+                            <label for="formGroupExampleInput5">Телефон1<sup><i
                                         class="addontact__star fas fa-star-of-life"></i></sup></label>
-                            <input type="text" class="form-control is-valid" id="formGroupExampleInput"
+                            <input type="text" class="form-control is-valid" id="formGroupExampleInput5"
                                 value="+7 (904) 407-96-86">
                         </div>
                         <div class="form-group">
-                            <label for="formGroupExampleInput">Телефон 2</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput"
+                            <label for="formGroupExampleInput6">Телефон 2</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput6"
                                 placeholder="+X (XXX) XXX-XX-XX">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email<sup><i
+                            <label for="exampleInputEmail7">Email<sup><i
                                         class="addontact__star fas fa-star-of-life"></i></sup></label>
-                            <input type="email" class="form-control is-invalid" id="exampleInputEmail1"
+                            <input type="email" class="form-control is-invalid" id="exampleInputEmail7"
                                 aria-describedby="emailHelp" value="chernyshov.s!mail.com">
                             <div class="invalid-feedback">Ошибка! Email введен некорректно</div>
                         </div>
@@ -314,7 +315,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Удалить контакт</h5>
+                    <h5 class="modal-title">Удалить контакт</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -340,6 +341,29 @@
                     <a href="./contacts.html" class="btn btn-outline-info order__btn order__btn--reserve btn-lg"
                         role="button" aria-pressed="true">Отмена</a>
                     <button type="submit" class="btn btn-primary btn-info order__btn btn-lg">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout -->
+    <div class="modal fade addcontact" id="logOut" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавить заказ в транспорт</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Вы собираетесь выйти из своей учетной записи.</p>
+                    <p>Хотите продолжить?</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="btn btn-outline-info order__btn order__btn--reserve btn-lg"
+                        role="button" aria-pressed="true">Отмена</a>
+                    <button type="submit" class="btn btn-primary btn-info order__btn btn-lg">Выйти</button>
                 </div>
             </div>
         </div>

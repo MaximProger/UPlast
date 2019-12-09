@@ -23,38 +23,39 @@
 
 <body>
 
-    <header class="header">
+        <header class="header">
 
-        <nav class="navbar navbar-expand-md">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar__burger navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Заказы</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Контакты</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Помощник продаж</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Помощь</a>
-                        </li>
-                    </ul>
-                    <form class="form-inline mt-2 mt-md-0">
-                        <button type="button" class="btn nav__bar__btn__enter btn-outline-info">Выход</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-
-    </header>
+                <nav class="navbar navbar-expand-md">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar__burger navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="./index.html">Заказы</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./contacts.html">Контакты</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Помощник продаж</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Помощь</a>
+                                </li>
+                            </ul>
+                            <form class="form-inline mt-2 mt-md-0">
+                                <button type="button" class="btn nav__bar__btn__enter btn-outline-info" data-toggle="modal"
+                                data-target="#logOut">Выход</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+        
+            </header>
 
 
     <section class="order">
@@ -78,7 +79,7 @@
                 <div class="board__inner row">
                     <div class="reserve__form__inner col-xl-9">
                             <p>Укажите контактные данные и адрес для доставки</p>
-                    <div class="reserve__form__wrapper d-flex justify-content-between align-items-top">
+                    <div class="reserve__form__wrapper d-flex flex-wrap justify-content-between align-items-top">
                         <div class="reserve__form__item reserve__form__item--1">
                             <h2 class="reserve__form__item__title">Контактные данные</h2>
                             <form>
@@ -91,14 +92,14 @@
                                         <option>ИП Кузнецов</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect2">Контактное лицо</label>
+                                <div class="form-group reserve__form__select" id="formSelect">
+                                    <label for="firstSelectDel">Контактное лицо</label>
                                     <div class="select__wrapper">
-                                            <select class="form-control" id="exampleFormControlSelect2">
+                                            <select class="form-control" id="firstSelectDel">
                                                     <option>Ковалевич Николай Сергеевич</option>
                                                     <option>Василевская Инга Павловна</option>
                                                     <option>Чернышов Сергей Павлович</option>
-                                                </select><a href="#" class="select__del table__del " title="Удалить"><i
+                                                </select><a href="#" class="select__del table__del deliteBtn" title="Удалить"><i
                                                     class="fas fa-trash-alt"></i></a>
                                     </div>
                                     <div class="select__wrapper">
@@ -106,12 +107,11 @@
                                                     <option>Василевская Инга Павловна</option>
                                                     <option>Ковалевич Николай Сергеевич</option>
                                                     <option>Чернышов Сергей Павлович</option>
-                                                </select> <a href="#" class="select__del table__del" title="Удалить"><i
+                                                </select> <a href="#" class="select__del table__del deliteBtn" title="Удалить"><i
                                                     class="fas fa-trash-alt"></i></a>
                                     </div>
-                                    <div class="reserve__form__wrapper__add"><a href="#" class="reserve__form__add">+ Добавить контакт</a></div>
-
                                 </div>
+                                <div class="reserve__form__wrapper__add"><a href="#" id="addSelect" class="reserve__form__add">+ Добавить контакт</a></div>
 
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Телефон<sup><i
@@ -148,9 +148,9 @@
                     <div class="your__order">
                         <h3 class="reserve__form__item__title your__order__title">ваш заказ</h3>
                         <div class="your__order__body">
-                            <div class="your__order__line">Сайдинг «Корабельный брус» ………… бежевый ………… 120.04 RUB ………… 10 шт ………… 1 200.04 RUB <a href="#" class="your__order__del table__del" title="Удалить"><i
+                            <div class="your__order__line">Сайдинг «Корабельный брус» ………… бежевый ………… 120.04 RUB ………… 10 шт ………… 1 200.04 RUB <a href="#" class="your__order__del table__del deliteBtn" title="Удалить"><i
                                 class="fas fa-trash-alt"></i></a></div>
-                            <div class="your__order__line">Сайдинг «Корабельный брус» ………...ванильный ………120.04 RUB ………… 10 шт ………… 1 200.04 RUB <a href="#" class="your__order__del table__del" title="Удалить"><i
+                            <div class="your__order__line">Сайдинг «Корабельный брус» ………...ванильный ………120.04 RUB ………… 10 шт ………… 1 200.04 RUB <a href="#" class="your__order__del table__del deliteBtn" title="Удалить"><i
                                 class="fas fa-trash-alt"></i></a></div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
                 </div>
 
                     <div class="board__profile col-lg-12 col-xl-3">
-                        <div class="board__wrapper col-lg-6 col-xl-12">
+                        <div class="board__wrapper col-xl-12">
                             <nav>
                                 <div class="profile profile--product nav nav-tabs" id="nav-tab" role="tablist">
                                     <a class="profile__title profile__title--2 nav-item nav-link active"
@@ -183,7 +183,7 @@
                                             </div>
                                             <div class="profile__item__line profile__item__line--product mb-2 d-flex align-items-center justify-content-between ">
                                                 <p><b>К заказу допустима продукция короче:</b></p>
-                                                <p><u>10.55 м</u></p>
+                                                <p><u>10.55м</u></p>
                                             </div>
                                             <div class="profile__item__line profile__item__line--product mb-2 d-flex align-items-center justify-content-between">
                                                 <p><b>Процент заполнения машины:</b></p>
@@ -225,7 +225,7 @@
                         </div>
                         
                     </div>
-                    <div class="order__top__btn text-right col-xl-9">
+                    <div class="order__top__btn text-right col-xl-9 mt-4">
                             <a href="#" class="btn btn-outline-info order__btn" role="button" aria-pressed="true">Сохранить черновик</a>
                             <a href="#" class="btn btn-primary btn-info order__btn" role="button" aria-pressed="true">Оформить заказ</a>
                         </div>
@@ -233,75 +233,6 @@
                 </div>
             </div>
     </main>
-
-    <!--Product Preview-->
-    <div class="modal fade addcontact" id="productPreview-1" tabindex="-1" role="dialog"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Сайдинг «Корабельный брус»</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-
-                    <!-- <p>Сайдинг (ПВХ).0230.Н. «Корабельный брус», 4735С, бежевый</p>
-                    <div class="product__photo text-center">
-                        <img src="./img/product__photo-1.png" alt="Product Photo">
-                    </div> -->
-
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                            aria-labelledby="pills-home-tab">
-                            <p>Сайдинг (ПВХ).0230.Н. «Корабельный брус», 4735С, бежевый</p>
-                            <img class="product__photo img-fluid" src="./img/product__photo-1.png"
-                                alt="Product Photo 1">
-                        </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
-                            aria-labelledby="pills-profile-tab">
-                            <p>Сайдинг (ПВХ).0430.Н. «Корабельный брус», 4345С, ванильный</p>
-                            <img class="product__photo img-fluid" src="./img/product__photo-2.png"
-                                alt="Product Photo 2">
-                        </div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
-                            aria-labelledby="pills-contact-tab">
-                            <p>Сайдинг (ПВХ).0230.Н. «Корабельный брус», 4735С, белый</p>
-                            <img class="product__photo img-fluid" src="./img/product__photo-3.png"
-                                alt="Product Photo 3">
-                        </div>
-                    </div>
-                    <ul class="product__pannel nav nav-pills mb-3 text-center d-flex align-items-center justify-content-center"
-                        id="pills-tab" role="tablist">
-                        <li class="nav-item">
-                            <a class="product__pannel__link nav-link active" id="pills-home-tab" data-toggle="pill"
-                                href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true"><img
-                                    src="./img/product__photo-1.png" width="60" height="50" alt="Product Logo Small"
-                                    class="img-thumbnail product__photo__small"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="product__pannel__link nav-link" id="pills-profile-tab" data-toggle="pill"
-                                href="#pills-profile" role="tab" aria-controls="pills-profile"
-                                aria-selected="false"><img src="./img/product__photo-2.png" width="60" height="50"
-                                    alt="Product Logo Small" class="img-thumbnail product__photo__small"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="product__pannel__link nav-link" id="pills-contact-tab" data-toggle="pill"
-                                href="#pills-contact" role="tab" aria-controls="pills-contact"
-                                aria-selected="false"><img src="./img/product__photo-3.png" width="60" height="50"
-                                    alt="Product Logo Small" class="img-thumbnail product__photo__small"></a>
-                        </li>
-                    </ul>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-info" data-dismiss="modal">Закрыть</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrab & jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
