@@ -52,4 +52,16 @@ $(function() {
         $('#addSelect').hide();
     })
 
+    // Hide Hints
+    $(window).on('load resize', function(){
+        let win = $(this);
+        if (win.width() <= 768) {
+            $( ".table__edit" ).attr( "data-original-title", "" );
+            $( ".table__del" ).attr( "data-original-title", "" );
+            $( ".table__tab" ).attr( "data-original-title", "" );
+            $( ".table__copy" ).attr( "data-original-title", "" );
+        } 
+  
+      });
+
 });
