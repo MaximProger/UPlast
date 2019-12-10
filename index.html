@@ -175,7 +175,8 @@
 												class="fas fa-pencil-alt"></i></a>
 										<a href="#" class="table__copy" title="Копировать"><i
 												class="fas fa-copy"></i></a>
-										<a href="#" class="table__del" title="Удалить"><i
+										<a href="#" class="table__del" title="Удалить" data-toggle="modal"
+										data-target="#deleteLine"><i
 												class="fas fa-trash-alt"></i></a>
 									</td>
 								</tr>
@@ -417,23 +418,46 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Выйти</h5>
+					<h5 class="modal-title" id="exampleModalLongTitle">Да</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<p>Вы собираетесь выйти из своей учетной записи.</p>
+					<p>Вы собираетесь Да из своей учетной записи.</p>
 					<p>Хотите продолжить?</p>
 				</div>
 				<div class="modal-footer">
 					<a href="#" data-dismiss="modal" class="btn btn-outline-info order__btn order__btn--reserve btn-lg"
 						role="button" aria-pressed="true">Отмена</a>
-					<button type="submit" class="btn btn-primary btn-info order__btn btn-lg">Выйти</button>
+					<button type="submit" class="btn btn-primary btn-info order__btn btn-lg">Да</button>
 				</div>
 			</div>
 		</div>
 	</div>
+
+		<!-- Delete Line -->
+		<div class="modal fade addcontact" id="deleteLine" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Удаление</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Вы собираетесь удлить запись.</p>
+						<p>Хотите продолжить?</p>
+					</div>
+					<div class="modal-footer">
+						<a href="#" data-dismiss="modal" class="btn btn-outline-info order__btn order__btn--reserve btn-lg"
+							role="button" aria-pressed="true">Отмена</a>
+						<button type="submit" class="btn btn-primary btn-info order__btn btn-lg">Да</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 
 	<!-- Bootstrab & jQuery -->
