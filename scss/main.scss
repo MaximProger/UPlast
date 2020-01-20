@@ -322,7 +322,12 @@ body {
 }
 
 .board__profile {
+	&-fixed {
+		position: fixed;
+		right: 0;
+	}
 	@media (max-width: 1200px) {
+		position: static;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
