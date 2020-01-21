@@ -323,8 +323,9 @@ body {
 
 .board__profile {
 	&-fixed {
-		position: fixed;
+		position: sticky;
 		right: 0;
+		top: 1rem;
 	}
 	@media (max-width: 1200px) {
 		position: static;
